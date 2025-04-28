@@ -41,7 +41,11 @@
         .chat {
             width: 30%;
             height: 80vh; /* Adjust the height to your preference */
-            background-color: #181818; /* Twitch dark theme background color */
+        }
+
+        /* Force background color for chat iframe */
+        .chat iframe {
+            background-color: #181818; /* Twitch's dark background color */
         }
     </style>
 </head>
@@ -56,13 +60,14 @@
         </iframe>
 
         <!-- Twitch Chat Embed -->
-        <iframe
-            class="chat"
-            src="https://www.twitch.tv/embed/jackafur/chat?parent=stream.jackafur.com"
-            frameborder="0"
-            scrolling="no"
-            allowfullscreen="true">
-        </iframe>
+        <div class="chat">
+            <iframe
+                src="https://www.twitch.tv/embed/jackafur/chat?parent=stream.jackafur.com"
+                frameborder="0"
+                scrolling="no"
+                allowfullscreen="true">
+            </iframe>
+        </div>
     </div>
 </body>
 </html>
