@@ -22,18 +22,46 @@
             margin-bottom: 20px;
         }
 
+        .container {
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+            align-items: flex-start;
+        }
+
         iframe {
             border: none;
-            width: 100%;
-            height: 80%;
+        }
+
+        .stream {
+            width: 70%;
+            height: 80vh; /* Adjust the height to your preference */
+        }
+
+        .chat {
+            width: 30%;
+            height: 80vh; /* Adjust the height to your preference */
         }
     </style>
 </head>
 <body>
     <h1>Watch the stream live!</h1>
-    <iframe
-        src="https://player.twitch.tv/?channel=jackafur&parent=stream.jackafur.com"
-        height="480" width="854" frameborder="0" scrolling="no" allowfullscreen="true">
-    </iframe>
+    <div class="container">
+        <!-- Twitch Stream Embed -->
+        <iframe
+            class="stream"
+            src="https://player.twitch.tv/?channel=jackafur&parent=stream.jackafur.com"
+            frameborder="0" scrolling="no" allowfullscreen="true">
+        </iframe>
+
+        <!-- Twitch Chat Embed -->
+        <iframe
+            class="chat"
+            src="https://www.twitch.tv/embed/jackafur/chat?parent=stream.jackafur.com"
+            frameborder="0"
+            scrolling="no"
+            allowfullscreen="true">
+        </iframe>
+    </div>
 </body>
 </html>
